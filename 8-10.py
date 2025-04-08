@@ -1,4 +1,5 @@
 import math
+from random import randrange
 """8) Na vstupu je zadáno přirozené číslo n. Vypočtěte n!. Použijte funkce VSTUP, FAKTORIAL, VYSTUP."""
 def load_input():
     return int(input('Zadejte cislo: '))
@@ -29,5 +30,12 @@ def pick_dessert():
 def kombinatorika(n: int, k: int):
     print(f"Pocet permutaci: {math.factorial(n)}, pocet variaci: {math.perm(n, k)}, pocet kombinaci: {math.comb(n, k)}")
 
-kombinatorika(, 3)
-pick_dessert()
+def rand_dessert():
+    print(f"Vybrán dezert: {fruit[randrange(len(fruit))]} s {dip[randrange(len(dip))]}.")
+#8
+#output_factorial(6)
+#9
+#pick_dessert()
+#10
+#kombinatorika(2, 3)
+#rand_dessert()
