@@ -1,21 +1,19 @@
-"""4) Napište program, který z klávesnice přečte zadané celé číslo. Pokud číslo bude 0, vytvořte tabulku malé násobilky.
- Pokud číslo bude 1, vytvořte tabulku velké násobilky."""
 from math import sqrt
 
-
-def loadInput():
+def load_input():
     return int(input('Zadejte cislo: '))
 
-def print_even_chart(lst_of_lsts):
-    max_column_widths = [max(len(str(item)) for item in col) for col in zip(*lst_of_lsts)]
-    for row in lst_of_lsts:
-        formatted_row = "  ".join(f"{str(item):<{max_column_widths[i]}}" for i, item in enumerate(row))
-        print(formatted_row)
+"""4) Napište program, který z klávesnice přečte zadané celé číslo. Pokud číslo bude 0, vytvořte tabulku malé násobilky.
+ Pokud číslo bude 1, vytvořte tabulku velké násobilky."""
 
 def print_multiples(num: int):
     multiples = [i for i in range(1, 11)]
     multiplicators = [i for i in range(11, 21)] if num == 0 else multiples
-    print_even_chart([list(map(lambda x: x*i, multiples)) for i in multiplicators])
+    chart = ([list(map(lambda x: x*i, multiples)) for i in multiplicators])
+    
+    max_column_widths = [max(len(str(item)) for item in col) for col in zip(*chart)]
+    for row in chart:
+        print("  ".join(f"{str(item):<{max_column_widths[i]}}" for i, item in enumerate(row)))
 
 """5) Na vstupu z klávesnice jsou zadána 3 reálná čísla - koeficienty a, b, c kvadratické rovnice. Vypočítejte kořeny
 této rovnice a na monitor zobrazte jeden ze tří možných výstupů: Rovnice má v R dva kořeny x1=…, x2=… 
@@ -42,16 +40,17 @@ def print_nums(n: int):
 konce řady).Na monitor zobrazte maximum, minimum, součet a průměr čísel z řady.
 """
 def load_many_inputs():
-    nums = []
-    nums.append(loadInput())
+    nums = [load_input()]
     while nums[-1] != 0:
-        nums.append(loadInput())
+        nums.append(load_input())
+    nums.pop(-1)
     return nums
 
 def analyze_nums(nums: list[int]):
-    print(f"")
+    print(f"Maximum:{max(nums)}, minimum:{min(nums)}, součet: {sum(nums)}, průměr: {sum(nums)/len(nums)}")
 #4
 #print_multiples(loadInput())
 #5
 #6
 print_nums(5)
+analyze_nums(load_many_inputs())
