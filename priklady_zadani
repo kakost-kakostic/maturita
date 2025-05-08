@@ -1,0 +1,125 @@
+1-7: skalární datové typy, základní algortmizační struktury
+
+8-10: funkce
+
+11-13: želví grafika
+
+14-17: vykreslování geometrických tvarů
+
+18-20: 1D seznamy
+
+20-25: 2D seznamy
+
+26-30: metody třídění a vyhledávání
+
+31-35: řetězce
+
+36-37: množiny
+
+38-41: n-tice
+
+42-45: slovníky
+
+46-50: objekty
+
+1) Na vstupu z klávesnice jsou zadána 2 celá čísla. Uložte je do proměnných a, b. V paměti proveďte záměnu hodnot v proměnných a, b. Na monitor zobrazte hodnoty proměnných a, b před záměnou a po záměně.
+
+2) Na vstupu z klávesnice jsou dány 3 úhly trojúhelníku. Zjistěte, zda takový trojúhelník existuje nebo neexistuje. Pokud existuje, určete, zda je pravoúhlý, ostroúhlý nebo tupoúhlý. Dále zjistěte, zda je rovnostranný, rovnoramenný nebo obecný. Svá zjištění zobrazte na monitor.
+
+3) Na vstupu z klávesnice jsou dány 3 strany trojúhelníku. Zjistěte, zda takový trojúhelník existuje nebo neexistuje. Pokud existuje, určete, zda je/není pravoúhlý. Dále zjistěte, zda je rovnostranný, rovnoramenný (se základnou a nebo b nebo c) nebo obecný. Svá zjištění zobrazte na monitor.
+
+4) Napište program, který z klávesnice přečte zadané celé číslo. Pokud číslo bude 0, vytvořte tabulku malé násobilky. Pokud číslo bude 1, vytvořte tabulku velké násobilky.
+
+5) Na vstupu z klávesnice jsou zadána 3 reálná čísla - koeficienty a, b, c kvadratické rovnice. Vypočítejte kořeny této rovnice a na monitor zobrazte jeden ze tří možných výstupů: Rovnice má v R dva kořeny x1=…, x2=… Rovnice má v R dvojnásobný kořen x1=x2=… Rovnice nemá v R řešení
+
+6) Na vstupu z klávesnice je zadáno přirozené číslo n Na monitor zobrazte: prvních n přirozených čísel prvních n přirozených sudých čísel počínaje od 2 prvních n přirozených lichých čísel počínaje od 1
+
+7) Na vstupu z klávesnice je zadána řada celých nenulových čísel ukončených nulou (nula je chápána jako značka konce řady).Na monitor zobrazte maximum, minimum, součet a průměr čísel z řady.
+
+8) Na vstupu je zadáno přirozené číslo n. Vypočtěte n!. Použijte funkce VSTUP, FAKTORIAL, VYSTUP.
+
+9) Vytvořte nabídku dezertů tak, že si uživatel vybere ovoce (1-jahody, 2-maliny, 3 -ostružiny) a dipp (1- šlehačka, 2 – jogurt). Z vybraných ingrediencí bude sestaven dezert). Použijte funkce choose_fruit, add_dipp a choose_dessert.
+
+10) Vytvořte program s ukázkami funkcí z knihovem math a random.
+
+11) S využitím želví grafiky napište funkci draw_pictures, ktera bude mít na vstupu zadán počet vrchlů n-úhelníku a počet kopií tohoto n-úhelníku rovnoměrně rozprostřených po kružnici, a která tyto n-úhelníky vykreslí.
+
+12) S využitím želví grafiky napište program, který vykreslí zadaný počet soustředných kružnic (max 30) se středy v bodě [0,0] = střed plátna a s různými poloměry. Barvy kružnic generujte náhodně.
+
+13) S využitím želví grafiky napište program, který vykreslí 36 kružnic o zadaném poloměru r (r je maximálně 150). Kružnice budou mít společnčný bod v bodě [0,0] = střed plátna. Barvy kružnic generujte náhodně.
+
+14) Z klávesnice zadejte délky stran a, b obdélníku (přirozená čísla). Napište program, který vykreslí obdélník tak, aby vždy ležel delší stranou naležato a levý dolní roh obdélníku byl v bodě [100, 250]. Obdélník vybarvěte červenou barvou.
+
+15) Z klávesnice zadejte jeden z názvů zemí: Nizozemí, Německo, Maďarsko. Na monitor vykreslete barvu příslušné země.
+
+16) Na monitor vykreslete šachovnici. 8*8 políček s velikostí strany 50.
+
+17) Na monitor vykreslete plástev medu podle vzoru uvedeného na obrázku Vceli_plastev.jpg.
+
+18) Na vstupu je zadáno přirozené číslo n. Stanovte všechny jeho přirozené dělitele.
+
+19) Na vstupu je zadána řada číselných hodnot, ve které se mohou čísla opakovat. Na výstup zobrazte tutéž řadu čísel, každé číslo se v ní však bude vyskytovat pouze jednou (tedy vstupní řada bez duplikátů).
+
+20) Vygenerujte seznam 6 různých náhodných přirozených. čísel z intervalu 1 až 49 (např. čísla, která uživatel vsadil ve Sportce). Dále vygenerujte další seznam 6 různých náhodných přirozených čísel z intervalu 1 až 49 (např. čísla, která byla ve Sportce skutečně tažena). Určete, kolik čísel je shodných v obou seznamech.
+
+21) Naplňte 2D seznam (matici) o rozměru 3*3 celými čísly a zobrazte ji na monitor.
+
+22) Na vstupu je zadáno přirozené číslo (max 30), které označuje velikost čtvercové matice. Vytvořte matici, jejíž prvky budou mít v hlavní a vedlejší diagonále hodnotu 1, jinak 0. Výslednou matici zobrazte na monitor.
+
+23) Naplňte matici 3*3 celými čísly zadanými z klávesnice. Na monitor zobrazte součet všech prvků matice, maximální a minimální prvek matice.
+
+24) Naplňte matici 3*3 celými čísly zadanými z klávesnice. Vytvořte tříprvkový seznam, který bude obsahovat součty jednotlivých řádků a další tříprvkový seznam, který bude obsahovat součty jednotlivých sloupců. Na monitor zobrazte původní matici a oba seznamy se součty.
+
+25) Naplňte matici 3*3 celými čísly. Vytvořte transponovanou matici. Původní i transponovanou matici zobrazte na monitor.
+
+26) Na vstupu je dán vzor, který budeme hledat v následující řadě čísel (vzor se v řadě může vyskytnout nejvýše jednou). Dále je na vstupu dáno přirozené číslo n (označující počet prvků v následující řadě čísel) a vlastní řada n čísel. Pomocí metody sekvenčního hledání určete, zda se zadaný vzor v řadě vyskytuje, či nikoliv.
+
+27) Na vstupu je dán vzor, který budeme hledat v následující řadě čísel (vzor se v řadě může vyskytnout nejvýše jednou). Dále je na vstupu dáno přirozené číslo n (označující počet prvků v následující řadě čísel) a vlastní řada n čísel. Pomocí metody binárního hledání (= metodou půlení intervalu) určete, zda se zadaný vzor v řadě vyskytuje, či nikoliv.
+
+28) Zdanou řadu čísel seřaďte vzestupně metodou Select Sort
+
+29) Zdanou řadu čísel seřaďte vzestupně metodou Insert Sort
+
+30) Zdanou řadu čísel seřaďte vzestupně metodou Quick Sort
+
+31) Zjistěte, zda 2 řetězce zadané z klávesnice jsou / nejsou anagram (obsahují stejná písmena)
+
+32) Zjistěte, zda řetězec zadaný z klávesnice je / není palindrom (čte se stejně zepředu jako zezadu)
+
+33) Zjistěte četnost výskytu pásmene a (malého i velkého) v zadaném textovém řetězci
+
+34) Ze zadaného textového řetězce vytvořte nový textový řetězec, ve kterém se každý znak bude opakovat n krát (n je zadáno z klávesnice)
+
+35) Na vstupu z klávesnice je zadaný textový řetězec a přirozené číslo. Zašifrujte řetězec Cézarovou šifrou a výsledný řetězec zobrazte na monitor.
+
+36) Napište program, ve kterém naplníte množinu planety jmény několika planet naší sluneční soustavy. Na objektu planety vyzkoušejte několik metod, které Python nabízí pro práci s množinami (přidání jednoho prvku k množině, přidání více prvků k množině, odstranění prvku z množiny, zjištění počtu prvků množiny, stanovení, zda prvek leží v množině).
+
+37) Naplňte jmény zvířat množiny ZOO_Brno a ZOO_Praha. Na ně aplikujte operace průniku, sjednocení a rozdílu množin.
+
+38) Napište program, který vypočítá celočíselný podíl a zbytek dvou celých čísel. Použijte funkci podíl_a_zbytek, která bude mít na vstupu 2 celá čísla a na výstup vydá n-tici se dvěma prvky (podíl, zbytek).
+
+39) Na vstupu z klávesnice budou zadána 4 reálná čísla a, b, c, d. Vytvořte z nich 2 komplexní čísla (a,b), (c,d) jako dvě dvouprkové n-tice. Vypočítejte součet těchto dvou komplexních čísel. Použijte funkci, na jejímž vstupu budou vytvořené n-tice (a,b), (c,d) a na výstupu bude jedna n-tice (e,f), která bude reprezentovat součet vstupních komplexních čísel. Výsledné komplexní číslo zobrazte na monitor.
+
+40) Na vstupu z klávesnice budou zadána 4 reálná čísla x1, y1, x2, y2, která reprezentují souřadnice 2 bodů v rovině. Vytvořte z nich dvě dvouprkové n-tice (x1,y1), (x2,y2). Vypočítejte vzdálenost těchto dvou bodů. Použijte funkci, na jejímž vstupu budou vytvořené n-tice (x1,y1), (x2,y2) a na výstupu bude jedno reálné číslo reprezentující vzdálenost vstupních bodů. Výslednou vzdálenost zobrazte na monitor.
+
+41) Ve 3 n-ticích evidujte údaje o 3 zaměstnancích (jméno, příjmení, plat). Vytvořte seznam těchto n-tic, projděte jej a najděte pracovníka s nejvyšším platem. Na výstup zobrazte jméno, příjmení a plat nalezeného pracovníka.
+
+42) Na vstupu z klávesnice je zadaný text. Na výstup zobrazte reprezentaci tohoto textu Morseovou abecedou. K převodu využijte slovník.
+
+43) Na vstupu z klávesnice je zadán text. Slovníkem reprezentujte počet výskytů jednotlivých písmen v zadaném textu a vytvořený slovník zobrazte na monitor.
+
+44) Na vstupu je zadaný slovník, který obsahuje názvy dezertů (hodnoty) a ceny dezertů (klíče). Vytvořte nový slovník, který bude obsahovat tytéž položky jako původní slovník a ty budou setříděné podle abecedy podle názvů dezertů.
+
+45) Na vstupu je zadaný slovník, který obsahuje názvy dezertů (hodnoty) a ceny dezertů (klíče). Vytvořte nový slovník, který bude obsahovat tytéž položky jako původní slovník a ty budou setříděné vzestupně podle ceny (sestupně podle ceny).
+
+46) Nadefinujte třídu Auto, která bude obsahovat 4 metody: - kosnstruktor, který bude inicializovat atributy jmeno (majitele), barvu a rychlost - metodu majitel, která na monitor zobrazí jméno majitele auta - metodu barevnost, která na monitor zobrazí barvu auta - metodu vykon, která na monitor zobrazí maximální rychlost auta Vytvořte dvě instance třídy Auto (tedy 2 objekty), nazvěte je auto_1 a auto_2 a aplikujte na ně metody majitel, barevnost a vykon (př. 46a, 46b) Na jednoduchém příkladu vysvětlete pojem viditelnost proměnných (př. 46c)
+
+47) Nadefinujte třídu Student, která bude obsahovat 3 metody: - kosnstruktor, který bude inicializovat atributy jméno studenta a seznam jeho známek - metodu pridat_znamku, která ke stávajícímu seznamu přidá zadanou známku - metodu prumerna_znamka, která vypočítá průměr ze známek uložených v seznamu a zobrazí jej na monirtor Vytvořte instanci třídy student (tedy objekt), nazvěte jeje student_1, metodou pridat_znamku postupně přidejte 4 známky do jeho seznamu známek. Metodou prumerna_znamka vypočítejte průměr známek zobrazte jej na monitor.
+
+48) Nadefinujte třídu Zamestnanec, která bude obsahovat 2 metody: - kosnstruktor, který bude inicializovat atributy jméno zaměstnance a jeho plat - metodu zobraz_informace, která jméno a plat zaměstnance zobrazí na monitor.
+
+Dále nadefinujte třídu Manazer, která bude odvozená ze třídy zaměstnanec (zdědí její metody i atributy) a navíc bude u manažera evidovat název oddělení, které vede. Vytvořte instanci třídy Zamestnanec, nazvěte ji zamestnanec_1 a metodou zobraz_informace zobrazte na monitor jeho jméno a plat. Vytvořte instanci třídy Manazer, nazvěte ji manazer_1 a metodou zobraz_informace zobrazte na monitor jeho jméno, plat a název oddělení, které vede.
+
+49) Nadefinujte třídu Zviratko, která bude obsahovat 3 metody: - kosnstruktor, který bude inicializovat atribut jméno zvířete - metodu jmenuji_se, která zobrazí jméno zvířete na monitor - metodu zvuk, která bude defována až v podtřídách. Dále nadefinujte podtřídy Pes, Kocka, Krava třídy Zvire, které budou obsahovat vlastní implementaci metody zvuk. Použijte výjimku NotImplementedError.
+
+50) Předchozí příklad vyřešte pomocí abstraktních tříd a metod.
