@@ -32,9 +32,7 @@ prvních n přirozených čísel,
 prvních n přirozených sudých čísel počínaje od 2 
 prvních n přirozených lichých čísel počínaje od 1 """
 def print_nums(n: int):
-    print([i+1 for i in range(n)])
-    print([i*2+2 for i in range(n)])
-    print([i*2+1 for i in range(n)])
+    print("", [i+1 for i in range(n)], "\n",[i*2+2 for i in range(n)], "\n", [i*2+1 for i in range(n)])
 
 """7) Na vstupu z klávesnice je zadána řada celých nenulových čísel ukončených nulou (nula je chápána jako značka 
 konce řady).Na monitor zobrazte maximum, minimum, součet a průměr čísel z řady.
@@ -43,8 +41,7 @@ def load_many_inputs():
     nums = [load_input()]
     while nums[-1] != 0:
         nums.append(load_input())
-    nums.pop(-1)
-    return nums
+    return nums[0:-1]
 
 def analyze_nums(nums: list[int]):
     print(f"Maximum:{max(nums)}, minimum:{min(nums)}, součet: {sum(nums)}, průměr: {sum(nums)/len(nums)}")

@@ -2,10 +2,12 @@
 """31) Zjistěte, zda 2 řetězce zadané z klávesnice jsou / nejsou anagram (obsahují stejná písmena)"""
 def is_anagram(word1, word2):
     return sorted(word1.lower()) == sorted(word2.lower())
+
 """32) Zjistěte, zda řetězec zadaný z klávesnice je / není palindrom (čte se stejně zepředu jako zezadu)"""
 def is_palindrome(word: str):
     word = word.replace(" ", "")
     return word == word[::-1]
+
 """33) Zjistěte četnost výskytu písmene a (malého i velkého) v zadaném textovém řetězci"""
 def a_count(word: str):
     return len(list(filter(lambda x: x == "a", word.lower())))
