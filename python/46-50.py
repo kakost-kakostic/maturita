@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 """46) Nadefinujte třídu Auto, která bude obsahovat 4 metody: - kosnstruktor, který bude inicializovat atributy jmeno
 (majitele), barvu a rychlost - metodu majitel, která na monitor zobrazí jméno majitele auta - metodu barevnost, která
 na monitor zobrazí barvu auta - metodu vykon, která na monitor zobrazí maximální rychlost auta Vytvořte dvě instance
@@ -5,11 +6,25 @@ třídy Auto (tedy 2 objekty), nazvěte je auto_1 a auto_2 a aplikujte na ně me
 (př. 46a, 46b) Na jednoduchém příkladu vysvětlete pojem viditelnost proměnných (př. 46c)"""
 
 class Bike:
-    def __init__(self, name, color):
-        self.name = name
-        self.color = color
+    def __init__(self, name, color, speed):
+        self._name = name
+        self._color = color
+        self._speed = speed
+        self.__secret = None
+    def print_name(self):
+        print(self._name)
 
-my_bike = Bike("Moje kolo", "modra")
+    def print_color(self):
+        print(self._color)
+
+    def print_speed(self):
+        print(self._speed)
+
+bike1 = Bike("Dan", "zelena",100)
+bike2 = Bike("Adam", "modra", 80)
+bike2.print_name()
+print(bike2._name)
+print(bike1._Bike__secret) #tomuhle se říká name mangling
 
 
 """47) Nadefinujte třídu Student, která bude obsahovat 3 metody: - kosnstruktor, který bude inicializovat atributy jméno
@@ -29,6 +44,7 @@ class Student:
         return sum(self.grades)/len(self.grades)
 
 pp = Student("Petr Pavel", [2,5,1,4,4,4,2,3])
+pp.add_grade(5)
 print(pp.get_average())
 """48) Nadefinujte třídu Zamestnanec, která bude obsahovat 2 metody: - kosnstruktor, který bude inicializovat atributy 
 jméno zaměstnance a jeho plat - metodu zobraz_informace, která jméno a plat zaměstnance zobrazí na monitor. Dále 
@@ -42,7 +58,7 @@ class Employee:
         self.name = name
         self.pay = pay
     def get_info(self):
-        return self.name, self.pay
+        print(self.name, self.pay)
 
     @staticmethod
     def needs_a_raise():
@@ -63,9 +79,9 @@ Použijte výjimku NotImplementedError."""
 class Animal:
     def __init__(self, name: str):
         self.name = name
-    @staticmethod
-    def make_noise():
-        raise ValueError("Unspecified animal makes no noise. ")
+
+    def make_noise(self):
+        raise ValueError("This method is not implemented in the base class.")
     def introduce(self):
         return f"Ahoj, ja jsem {self.name} a delam {self.make_noise()}."
 
@@ -73,17 +89,40 @@ class Dog(Animal):
     def __init__(self, name):
         super().__init__(name)
 
-    @staticmethod
-    def make_noise():
+    def make_noise(self):
         return "Haf haf"
 
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+
+    def make_noise(self):
+        return "Mňau"
+
+class Cow(Animal):
+    def __init__(self, name):
+        super().__init__(name)
+
+
+    def make_noise(self):
+        return "Bů"
 
 lizard = Dog("Lizzy")
 print(lizard.introduce())
 
-class StFunc:
-    @staticmethod
-    def is_friend_shaped():
-        return True
-
 """50) Předchozí příklad vyřešte pomocí abstraktních tříd a metod."""
+
+class Animal(ABC):
+    def __init__(self, name):
+        self.name = name  # Veřejný atribut jméno
+
+    def introduce(self):
+        print(f"Ahoj, mé jméno je {self.name}")
+
+    @abstractmethod
+    def make_noise(self):
+        pass
+
+class Dog(Animal):
+    def make_noise(self):
+        return "Haf haf"
