@@ -1,0 +1,44 @@
+.index {
+    background-image:url(blue_cell_tile.png);
+    color: rgb(51, 187, 255)
+}
+
+img{
+    max-width:450px;
+    max-height:450px;
+    align: center;
+}
+body {   background-image:url(yellow_cell_tile.png);
+        font-family: Ubuntu Bold, Arial Bold;
+        max-width: 990px;
+        margin: auto;
+        color: white
+}
+
+td {
+    padding: 20px
+}
+
+a:link {              color: lightgreen; }
+          a:visited {  color: green;    }
+          a:hover {    color: gray;    }
+          a:active {   color: gray;    }
+nav {
+      margin: auto
+       color: white;
+       padding: 20px
+}
+
+strong {
+    background-color:yellow
+       padding: 10px
+}
+
+p {
+  margin: auto
+  color: white;
+}
+h1 {
+      margin: auto
+    color: white;
+}
