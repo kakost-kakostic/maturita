@@ -68,12 +68,6 @@ function drinks($drink) {
     }
 }
 
-function rectangle($a, $b){
-    $S = $a * $b;
-    $o = 2 * $a + 2 * $b;
-    echo "Obsah obdelniku=$S ";
-    echo "Obvod obdelniku=$o ";
-}
 
 // tady se tridi requesty
     $method = $_SERVER['REQUEST_METHOD'] === 'POST' ? $_POST : $_GET;
@@ -89,9 +83,6 @@ function rectangle($a, $b){
                 break;
             case 'drinks':
                 drinks($_POST["drink"]);
-                break;
-            case 'rectangle':
-                rectangle($_GET["a"], $_GET["b"]);
                 break;
             default:
                 echo "Unknown action";
