@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Content-language" content="cs" />
+    <title>Formuláře</title>
+      <!-- Css styl mi stručně napsal ChatGPT. -->
+    <style type="text/css">
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f8f8;
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .form-box {
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 15px 20px;
+        border-radius: 8px;
+        width: 300px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 6px;
+        box-sizing: border-box;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 6px 12px;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="form-box">
+        <h1>Body mass index</h1>
+        <form action="priklady.php" method="get">
+          Výška (m) = <input type="text" name="height" />
+          Výha (kg) = <input type="text" name="weight" />
+          <input type="hidden" name="action" value="bmi" />
+          <input type="submit" name="tlacitko" value="Odeslat" />
+        </form>
+      </div>
+
+      <div class="form-box">
+        <h1>Drinky</h1>
+        <form action="priklady.php" method="post">
+          <select name="drink">
+            <option value="cola" selected>Coca cola</option>
+            <option value="tonic">Tonic</option>
+            <option value="juice">Juice</option>
+            <option value="pivo">Pivo</option>
+            <option value="sprite">Sprite</option>
+          </select>
+          <input type="hidden" name="action" value="drinks" />
+          <input type="submit" value="ODESLAT" />
+        </form>
+      </div>
+
+      <div class="form-box">
+        <h1>Kalkulačka</h1>
+        <form action="priklady.php" method="post">
+          <input type="text" name="a" />
+          <select name="operace">
+            <option value="plus" selected>plus</option>
+            <option value="minus">minus</option>
+            <option value="krat">krat</option>
+            <option value="deleno">deleno</option>
+          </select>
+          <input type="text" name="b" />
+          <input type="hidden" name="action" value="calculator" />
+          <input type="submit" value="ODESLAT" />
+          <input type="reset" value="VYMAZAT" />
+        </form>
+      </div>
+
+      <div class="form-box">
+        <h1>Kvadratická rovnice</h1>
+        <form method="get" action="priklady.php">
+          a <input type="text" name="a" size="10" /><br />
+          b <input type="text" name="b" size="10" /><br />
+          c <input type="text" name="c" size="10" /><br /><br />
+          <input type="hidden" name="action" value="quadratic" />
+          <input type="submit" value="odeslat" />
+          <input type="reset" value="vymazat" />
+        </form>
+      </div>
+
+      <div class="form-box">
+        <h1>Obdélník</h1>
+        <form action="priklady.php" method="get">
+          Šířka <input type="text" name="a" size="10" /><br />
+          Délka <input type="text" name="b" size="10" /><br />
+          <input type="hidden" name="action" value="rectangle" />
+          <input type="submit" value="Odešli" />
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>
+
